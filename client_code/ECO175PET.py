@@ -1,5 +1,6 @@
 from ._anvil_designer import ECO175PETTemplate
 from anvil import *
+import plotly.graph_objects as go
 import anvil.server
 
 class ECO175PET(ECO175PETTemplate):
