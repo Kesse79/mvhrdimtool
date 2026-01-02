@@ -1,6 +1,7 @@
 from ._anvil_designer import ECO175PETTemplate
 from anvil import *
 import plotly.graph_objects as go
+import plotly.io as pio
 import anvil.server
 
 class ECO175PET(ECO175PETTemplate):
@@ -112,11 +113,27 @@ class ECO175PET(ECO175PETTemplate):
           mode="lines",
           name=curve["label"],
           line={"color": curve["color"], "width": 2},
+          hovertemplate="Luftmængde: %{x} m3/h<br>Tryk: %{y} Pa<extra>%{name}</extra>",
         )
       )
 
     max_curve_points = self._get_curve_points("100%")
     if max_curve_points:
+      max_curve_flows = [p[0] for p in max_curve_points]
+      max_curve_pressures = [p[1] for p in max_curve_points]
+      fig.add_trace(
+        go.Scatter(
+          x=max_curve_flows,
+          y=max_curve_pressures,
+          mode="lines",
+          line={"color": "rgba(52,168,83,0.15)", "width": 0},
+          fill="tozeroy",
+          fillcolor="rgba(52,168,83,0.08)",
+          name="100% område",
+          hoverinfo="skip",
+          showlegend=False,
+        )
+      )
       click_flows, click_pressures = self._build_clickable_points(max_curve_points)
       fig.add_trace(
         go.Scatter(
@@ -126,7 +143,7 @@ class ECO175PET(ECO175PETTemplate):
           marker={"size": 6, "opacity": 0.01, "color": "#000000"},
           name="Vælg driftspunkt",
           showlegend=False,
-          hoverinfo="skip",
+          hovertemplate="Klik for driftspunkt<br>Luftmængde: %{x} m3/h<br>Tryk: %{y} Pa<extra></extra>",
         )
       )
 
@@ -148,6 +165,7 @@ class ECO175PET(ECO175PETTemplate):
       legend={"orientation": "h", "yanchor": "bottom", "y": 1.02, "xanchor": "right", "x": 1},
       clickmode="event+select",
     )
+    pio.templates.default = "plotly_white"
     self.plot_operating_point.figure = fig
 
   def plot_operating_point_click(self, **event_args):
