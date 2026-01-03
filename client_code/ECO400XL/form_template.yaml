@@ -16,15 +16,15 @@ components:
     name: pressure_input
     properties: {placeholder: Indtast Tryk (Pa), text: ''}
     type: TextBox
+  - event_bindings: {click: calc_button_click}
+    layout_properties: {grid_position: 'AXETRK,YKCGWY'}
+    name: calc_button
+    properties: {align: center, text: Beregn}
+    type: Button
   - layout_properties: {grid_position: ''}
     name: image_2
     properties: {source: _/theme/eco400xl.png}
     type: Image
-  - event_bindings: {click: calc_button_click}
-    layout_properties: {grid_position: 'DXMGVE,QXTOFZ'}
-    name: calc_button
-    properties: {align: center, text: Beregn}
-    type: Button
   - components:
     - name: card_sfp_title
       properties: {bold: true, font_size: 18, text: SFP / SEL & Total fan data}
