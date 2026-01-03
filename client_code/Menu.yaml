@@ -17,6 +17,10 @@ components:
     type: Button
   layout_properties: {}
   type: ColumnPanel
+- layout_properties: {slot: logo}
+  name: image_1
+  properties: {background: '#E1E3DF', source: _/theme/genvex-logo.svg, visible: true}
+  type: Image
 container:
   properties: {html: '@theme:standard-page.html'}
   type: HtmlTemplate
