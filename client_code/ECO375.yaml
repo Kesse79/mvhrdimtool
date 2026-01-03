@@ -4,42 +4,22 @@ components:
     name: rich_text_1
     properties: {content: ECO375 beregner, font_size: 20, visible: true}
     type: RichText
-  - layout_properties: {grid_position: 'OASHBE,UZSEWO XTQNUF,PLEMVJ'}
-    name: flow_label
-    properties:
-      icon: ''
-      spacing:
-        padding: [null, 183, null, null]
-      text: Luftmængde (m3/h)
-    type: Label
-  - layout_properties: {grid_position: 'OASHBE,UZSEWO JWJDWP,SSKQOQ'}
-    name: temp_label
-    properties: {text: Udetemperatur (C)}
-    type: Label
-  - layout_properties: {grid_position: 'OASHBE,UZSEWO WUUZCT,EUMMSC'}
-    name: pressure_label
-    properties: {text: Tryk (Pa)}
-    type: Label
-  - layout_properties: {grid_position: 'OASHBE,UZSEWO KJAKAU,QJPOSQ'}
-    name: sfp_j_label
-    properties: {}
-    type: Label
-  - layout_properties: {grid_position: 'OASHBE,SAYSAR SJASOX,KEPDUS'}
+  - layout_properties: {grid_position: 'SJASOX,KEPDUS'}
     name: flow_input
-    properties: {}
+    properties: {text: Indtast Luftmængde (m3/h)}
     type: TextBox
-  - layout_properties: {grid_position: 'OASHBE,SAYSAR IMSTAO,NENPIK'}
+  - layout_properties: {grid_position: 'IMSTAO,NENPIK'}
     name: temp_input
-    properties: {text: ''}
+    properties: {text: Indtast Udetemperatur (C)}
     type: TextBox
-  - layout_properties: {grid_position: 'OASHBE,SAYSAR MADTFP,VJPUEP'}
+  - layout_properties: {grid_position: 'MADTFP,VJPUEP'}
     name: pressure_input
-    properties: {}
+    properties: {text: Indtast Tryk (Pa)}
     type: TextBox
-  - layout_properties: {grid_position: 'OASHBE,SAYSAR UGQRIE,OLBAXR'}
-    name: repeating_panel_1
-    properties: {item_template: ECO400XL.ItemTemplate1}
-    type: RepeatingPanel
+  - layout_properties: {grid_position: 'MHTEVH,FJVONP'}
+    name: image_3
+    properties: {source: _/theme/ECO375.png}
+    type: Image
   - event_bindings: {click: calc_button_click}
     layout_properties: {grid_position: 'DXMGVE,QXTOFZ'}
     name: calc_button
