@@ -7,15 +7,15 @@ components:
   - event_bindings: {}
     layout_properties: {grid_position: 'SJASOX,KEPDUS'}
     name: flow_input
-    properties: {placeholder: '', text: Indtast Luftmængde (m3/h)}
+    properties: {placeholder: Indtast Luftmængde (m3/h), text: ''}
     type: TextBox
   - layout_properties: {grid_position: 'IMSTAO,NENPIK'}
     name: temp_input
-    properties: {text: Indtast Udetemperatur (C)}
+    properties: {placeholder: Indtast Udetemperatur (C), text: ''}
     type: TextBox
   - layout_properties: {grid_position: 'MADTFP,VJPUEP'}
     name: pressure_input
-    properties: {text: Indtast Tryk (Pa)}
+    properties: {placeholder: Indtast Tryk (Pa), text: ''}
     type: TextBox
   - layout_properties: {grid_position: 'MHTEVH,FJVONP'}
     name: image_3

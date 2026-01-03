@@ -40,13 +40,3 @@ class ECO375(ECO375Template):
     if sender and sender.tag:
       open_form(sender.tag)
 
-  @handle("flow_input", "pressed_enter")
-  def flow_input_pressed_enter(self, **event_args):
-
-    """This method is called when the user presses Enter in this text box"""
-    pass
-
-  @handle("flow_input", "focus")
-  def flow_input_focus(self, **event_args):
-
-    pass
