@@ -10,7 +10,7 @@ class ECO400XL(ECO400XLTemplate):
     def pick(cat_keys):
       picked = {k: v for k, v in result_dict.items() if any(kk.lower() in str(k).lower() for kk in cat_keys)}
       return picked
-    sfp = pick(['sfp','sel','fan'])
+    sfp = pick(['sfp', 'sel', 'fan', 'ventilator'])
     sound = pick(['lw','lp','sound','lyd'])
     heat = {k: v for k, v in result_dict.items() if k not in sfp and k not in sound}
     def render(d):
