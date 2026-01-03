@@ -175,6 +175,12 @@ lp_cabinet = np.array([
     [250, 200, 26.20, 34.20, 39.00, 41.40, 41.30, 37.10, 31.20, 23.40, 46.20],
 ])
 
+# Robust 2-trins interpolation/ekstrapolation (flow -> tryk)
+# Formål: undgå broadcast-fejl når tryk-trin har forskelligt antal flow-punkter,
+# og kunne "gætte" værdier op til 700 m3/h og 500 Pa.
+MAX_FLOW = 700.0
+MAX_PRESSURE = 500.0
+
 def _interp1_extrap(x, xp, fp):
   xp = np.asarray(xp, dtype=float)
   fp = np.asarray(fp, dtype=float)
