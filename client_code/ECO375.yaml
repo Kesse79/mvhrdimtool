@@ -4,9 +4,10 @@ components:
     name: rich_text_1
     properties: {content: ECO375 beregner, font_size: 20, visible: true}
     type: RichText
-  - layout_properties: {grid_position: 'SJASOX,KEPDUS'}
+  - event_bindings: {}
+    layout_properties: {grid_position: 'SJASOX,KEPDUS'}
     name: flow_input
-    properties: {text: Indtast Luftmængde (m3/h)}
+    properties: {placeholder: '', text: Indtast Luftmængde (m3/h)}
     type: TextBox
   - layout_properties: {grid_position: 'IMSTAO,NENPIK'}
     name: temp_input
