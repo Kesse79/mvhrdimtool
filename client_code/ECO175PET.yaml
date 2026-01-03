@@ -36,7 +36,7 @@ components:
     name: pressure_input
     properties: {}
     type: TextBox
-  - event_bindings: {}
+  - event_bindings: {click: plot_operating_point_click}
     layout_properties: {grid_position: 'KEDWHJ,BYFVKT'}
     name: plot_operating_point
     properties: {}
