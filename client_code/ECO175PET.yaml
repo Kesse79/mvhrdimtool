@@ -88,22 +88,31 @@ components:
   properties: {background: 'theme:On Background', source: _/theme/genvex-logo.svg}
   type: Image
 - components:
-  - layout_properties: {grid_position: 'PCDLYT,DWBWIX'}
-    name: label_1
-    properties: {text: ECO400XL}
-    type: Label
-  - layout_properties: {grid_position: 'BFZVFG,WUNYMO'}
-    name: label_1_copy
-    properties: {text: ECO375}
-    type: Label
-  - layout_properties: {grid_position: 'DKUOUU,BYGCXW'}
-    name: label_1_copy_copy
-    properties: {text: ECO360R}
-    type: Label
-  - layout_properties: {grid_position: 'QNHNGK,NIXMIU'}
-    name: label_1_copy_copy_copy
-    properties: {text: ECO190XL}
-    type: Label
+  - event_bindings: {click: nav_link_click}
+    layout_properties: {grid_position: 'PCDLYT,DWBWIX'}
+    name: link_eco400xl
+    properties: {tag: ECO400XL, text: ECO400XL}
+    type: Link
+  - event_bindings: {click: nav_link_click}
+    layout_properties: {grid_position: 'BFZVFG,WUNYMO'}
+    name: link_eco360
+    properties: {tag: ECO360, text: ECO360}
+    type: Link
+  - event_bindings: {click: nav_link_click}
+    layout_properties: {grid_position: 'DKUOUU,BYGCXW'}
+    name: link_eco375
+    properties: {tag: ECO375, text: ECO375}
+    type: Link
+  - event_bindings: {click: nav_link_click}
+    layout_properties: {grid_position: 'QNHNGK,NIXMIU'}
+    name: link_eco190xl
+    properties: {tag: ECO190XL, text: ECO190XL}
+    type: Link
+  - event_bindings: {click: nav_link_click}
+    layout_properties: {grid_position: 'RZCFEE,PTLQUM'}
+    name: link_eco175pet
+    properties: {tag: ECO175PET, text: ECO175PET}
+    type: Link
   layout_properties: {slot: left-nav}
   name: column_panel_2
   properties: {}

@@ -34,3 +34,8 @@ class ECO175PET(ECO175PETTemplate):
       if hasattr(self, 'out_sfp'): self.out_sfp.content = msg
       if hasattr(self, 'out_sound'): self.out_sound.content = msg
       if hasattr(self, 'out_heat'): self.out_heat.content = msg
+
+  def nav_link_click(self, **event_args):
+    sender = event_args.get('sender')
+    if sender and sender.tag:
+      open_form(sender.tag)
